@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
-<html>
+
 <head>
-		<title>Portfolio</title>
+		<title>LiveMasher</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<meta name="author" content="Coery Tan">
@@ -14,73 +14,122 @@
     <script src="https://use.fontawesome.com/44650f89ff.js"></script>
     <link rel="stylesheet" type="text/css" href="static/style.css">
 
+    <style>
+		.button {
+	  border: none;
+ 	 color: white;
+ 	 padding: 15px 32px;
+ 	 text-align: center;
+ 	 text-decoration: none;
+ 	 display: inline-block;
+ 	 font-size: 16px;
+ 	 margin: 4px 2px;
+  	cursor: pointer;
+		}
+
+.button1 {
+  border-color: #4CAF50;
+  color: green;
+} 
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.button1[disabled]
+{
+	pointer-events: none; 
+	background-color: #4CAF50;
+	color: black;
+}
+
+
+.button2 {
+  border-color: #f44336;
+  color: red;
+}
+
+.button2:hover {
+  background: #f44336;
+  color: white;
+}
+.button2[disabled]
+{
+	pointer-events: none; 
+	background: #f44336;
+	color: black;
+}
+
+p {
+  font-size: 30px;
+}
+	</style>
+
 </head>
-<body>
+	<div class = "text-center"
+		<div class="mt-5 mb-4">
+	      		<h1 class="display-1"><strong>LiveMasher</strong></h1>
+	      </div>
+
+		
+</div>
+<body style="background-color:#1c87c9;">
+
 	<div class="container">
 	  	<div class="card text-center border-0 my-5 shadow-lg">
-	    	<div class="mt-5 mb-4">
-	      		<h1 class="display-1"><strong>Corey Tan</strong></h1>
-	      	</div>
 	      	<div class="mx-auto" style="max-width: 50%;">
-	     		<p>
-     				Hello! My name is Corey and I am an ambitious undergraduate developer.
-     				I am seeking opportunities in which I can apply my skills to real life experience! 
+	     		<p >
+
+     				It will start small and when they are to record, it goes big.
 				</p>
-
-				<p> Current studies and projects: AWS and haar training face detection</p>
-				<p> Slightly inspirational quote: "Small mistakes crash rockets into planets." MIT 2006 Integration Bee commentator
-				</p>
-			</div>
-	  		<div>
-	  			<img src="static/me.jpg" class="avatar my-5">
-	  		</div>
-	  		<div class="card-body">
-				<nav>
-					<a href="https://www.linkedin.com/in/corey-tan-933bb5173/">
-					<i class="fa fa-linkedin-square fa-5x navitem grow linkedin" data-inline="false"></i>
-					</a>
-
-					<a href="https://www.github.com/coreytan00">
-					<i class="fa fa-github-alt fa-5x navitem grow github" data-inline="false"></i>
-					</a>
-
-					<a href="mailto:coreytan00@gmail.com">
-					<i class="fa fa-envelope fa-5x navitem grow email" data-inline="false"></i>
-					</a>
-				</nav>
 			</div>
 		</div>
 		<hr>
-		<div class="bottom-text text-center">
-			<a href="#" class="navitem">home</a>
-			<a href="projects.html" class="navitem">projects</a>
-		</div>	
 	</div>
 	<canvas class="background"></canvas>
-	<script src="https://npmcdn.com/particlesjs@2.2.2/dist/particles.min.js"></script>
-	<script>
-		window.onload = function(){
-			Particles.init({
-				selector:'.background',
-				color: '#03fc98',
-				maxParticles: 130,
-				connectParticles: true,
-				responsive: [
-					{
-						breakpoint: 768,
-						options: {
-							maxParticles: 80
-						}
-					}, {
-						breakpoint: 375,
-						options: {
-							maxParticles: 50
-						}
-					}
-				]
-			});
-		};
-	</script>
+	<div class="text-center">
+		<p>
+		<form action="/action_page.php"> <!--server-->
+  			<label for="fname">Enter Video URL</label>
+ 	 			<input type="text" id="fname" name="fname">
+	 	 		<input type="submit" value="Submit URL"><br><br>
+		</form>
+		<p>
+				OR
+
+		</p>
+		<form action="/action_page.php"> <!--server-->
+ 			 <label for="img">Upload video:</label>
+ 			 <input type="file" id="img" name="img" accept="video/*">
+  			 <input type="submit" value = "Submit Video">
+		</form>
+	</p>
+
+		<p>
+				<button onclick = "disableReady()" class= "button button1" id = "button1">Ready!</button> <!--when clicked, send signal to server that user is ready-->
+				<button onclick = "disableNotReady()" class="button button2" id = "button2">Not Ready</button> <!--when clicked, send signal to server that user is not ready-->
+				 <script>
+     				 function disableReady() {
+       					 document.getElementById("button1").disabled = true; /*send signal to server ready or unready*/ 
+       					 document.getElementById("button2").disabled = false; 
+
+      				}
+      				 function disableNotReady() {
+       					 document.getElementById("button1").disabled = false; 
+       					 document.getElementById("button2").disabled = true; 
+
+      				}
+
+    			</script>
+
+
+		</p>
+    	
+    	
+</div>
+
+	.</div>
+
+	
 </body>
 <!-- Footer -->
 <footer id="footer">
