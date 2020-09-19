@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+
+<head>
+		<title>LiveMasher</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="author" content="Coery Tan">
+
+	 <!-- Bootstrap CSS -->
+    <link rel="icon" href="static/icon2.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Tenor+Sans" rel="stylesheet">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://use.fontawesome.com/44650f89ff.js"></script>
+    <link rel="stylesheet" type="text/css" href="myStyle.css">
+
+</head>
+	<div class = "text-center"
+		<div class="mt-5 mb-4">
+	      		<h1 class="display-1"><strong>LiveMasher</strong></h1>
+	      </div>
+
+		
+</div>
+<body style="background-color:#1c87c9;">
+
+	<div class="container">
+	  	<div class="card text-center border-0 my-5 shadow-lg">
+	      	<div class="mx-auto" style="max-width: 50%;">
+	     		<p >
+	     			<div class = "groupTable" id = "groupTable"> 
+						  <table style="width:100%">
+ 				 			<tr>
+  				  			<th>Firstname</th>
+						    <th>Lastname</th> 
+						    
+						  </tr>
+						  <tr>
+						    <td>Jill</td>
+						    <td>Smith</td>
+						    
+						  </tr>
+						  <tr>
+						    <td>Eve</td>
+						    <td>Jackson</td>
+						   
+						  </tr>
+						  <tr>
+						    <td>John</td>
+						    <td>Doe</td>
+						    
+						  </tr>
+						</table> <br>
+						<p>
+							People who are in your group are listed above. Press GO when everyone is here!
+							<button class= "button goButton" id = "goButton">GO</button>
+
+
+						</p>
+
+
+					</div>
+					<div class = "groupTable" id = "hiddenInput">  <!--Send information to server, let server  -->
+						<form align="center">
+						  <label for="fname">First name:</label>
+						  <input type="text" id="fname" name="fname"><br><br>
+						  <label for="lname">Last name:</label>
+						  <input type="text" id="lname" name="lname"><br><br>
+						  <label for="code">Enter your group code: </label>
+						  <input type="text" id="code" name="code"><br><br>
+						  
+						  <input type="submit" value="Submit">
+						</form>
+					</div>
+
+     				
+				</p>
+			</div>
+		</div>
+		<hr>
+		<div class = "groupTable" id = "groupTableText">
+			<div class = "text-center">
+				Join Code: 
+				<br>
+			<p>
+				code goes here
+			</p>
+			</div> 
+			
+		</div>
+	</div>
+	<canvas class="background"></canvas>
+	
+	<div class="text-center">
+		
+		<p>
+			<button onclick = "makeGroup()" class= "button button3" id = "makeGroupButton">Make a New Group</button>
+		<p>
+				OR
+
+		</p>
+		<button onclick = "joinGroup()" class= "button button3" id = "makeGroupButton">Join Existing Group</button>
+		<script>
+     				 function makeGroup() {
+     				 	 var hiddenInput = document.getElementById("hiddenInput");
+       					 hiddenInput.style.display = "none";
+
+
+       					 var hiddenTable = document.getElementById("groupTable");
+       					 var hiddenTableText = document.getElementById("groupTableText");
+       					 hiddenTable.style.display = "block";
+       					  hiddenTableText.style.display = "block";
+
+       					 
+       					
+
+      				}
+      				 function joinGroup() {
+      				 	 var hiddenTable = document.getElementById("groupTable");
+      				 	 var hiddenTableText = document.getElementById("groupTableText");
+       					 hiddenTable.style.display = "none";
+       					 hiddenTableText.style.display = "none";
+
+       					 var hiddenInput = document.getElementById("hiddenInput");
+       					 hiddenInput.style.display = "block";
+       					
+
+      				}
+
+    			</script>
+	</p>	
+    	
+    	
+</div>
+
+	.</div>
+
+	
+</body>
+<!-- Footer -->
+<footer id="footer">
+</footer>
+</html>

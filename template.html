@@ -12,57 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Tenor+Sans" rel="stylesheet">
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <script src="https://use.fontawesome.com/44650f89ff.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-
-    <style>
-		.button {
-	  border: none;
- 	 color: white;
- 	 padding: 15px 32px;
- 	 text-align: center;
- 	 text-decoration: none;
- 	 display: inline-block;
- 	 font-size: 16px;
- 	 margin: 4px 2px;
-  	cursor: pointer;
-		}
-
-.button1 {
-  border-color: #4CAF50;
-  color: green;
-} 
-.button1:hover {
-  background-color: #4CAF50;
-  color: white;
-}
-.button1[disabled]
-{
-	pointer-events: none; 
-	background-color: #4CAF50;
-	color: black;
-}
-
-
-.button2 {
-  border-color: #f44336;
-  color: red;
-}
-
-.button2:hover {
-  background: #f44336;
-  color: white;
-}
-.button2[disabled]
-{
-	pointer-events: none; 
-	background: #f44336;
-	color: black;
-}
-
-p {
-  font-size: 30px;
-}
-	</style>
+    <link rel="stylesheet" type="text/css" href="myStyle.css">
 
 </head>
 	<div class = "text-center"
@@ -88,18 +38,18 @@ p {
 	<canvas class="background"></canvas>
 	<div class="text-center">
 		<p>
-		<form action="/action_page.php"> <!--server-->
-  			<label for="fname">Enter Video URL</label>
- 	 			<input type="text" id="fname" name="fname">
+		<form align ="center"> <!--server-->
+  			<label for="videoURL">Enter Video URL</label>
+ 	 			<input type="text" id="videoURL" name="videoURL">
 	 	 		<input type="submit" value="Submit URL"><br><br>
 		</form>
 		<p>
 				OR
 
 		</p>
-		<form action="/action_page.php"> <!--server-->
- 			 <label for="img">Upload video:</label>
- 			 <input type="file" id="img" name="img" accept="video/*">
+		<form align ="center"> <!--server-->
+ 			 <label for="video">Upload video:</label>
+ 			 <input type="file" id="video" name="video" accept="video/*">
   			 <input type="submit" value = "Submit Video">
 		</form>
 	</p>

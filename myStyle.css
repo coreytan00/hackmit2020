@@ -1,0 +1,64 @@
+.button {
+	  border: none;
+ 	 color: white;
+ 	 padding: 15px 32px;
+ 	 text-align: center;
+ 	 text-decoration: none;
+ 	 display: inline-block;
+ 	 font-size: 16px;
+ 	 margin: 4px 2px;
+  	cursor: pointer;
+		}
+
+.button1 {
+  border-color: #4CAF50;
+  color: green;
+} 
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.button1[disabled]
+{
+	pointer-events: none; 
+	background-color: #4CAF50;
+	color: white;
+}
+
+
+.button2 {
+  border-color: #f44336;
+  color: red;
+}
+
+.button2:hover {
+  background: #f44336;
+  color: white;
+}
+.button2[disabled]
+{
+	pointer-events: none; 
+	background: #f44336;
+	color: black;
+}
+
+.button3 {
+	  border-color: #f44336;
+  color: #008080;
+}
+.button3:hover {
+	background: #160f42;
+}
+.goButton {
+	background-color: #4CAF50;
+	 border-color: #4CAF50;
+	color: black;
+
+}
+
+.groupTable{
+	display:none;
+}
+
+
+
