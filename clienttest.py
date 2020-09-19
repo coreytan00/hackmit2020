@@ -5,7 +5,7 @@ import cv2
 options = {'multiclient_mode': True} 
 
 # Define NetGear Client at Server's IP address and assign a unique port address and other parameters 
-client = NetGear(address = '73.222.1.152', port = '5567', protocol = 'tcp',  pattern = 1, receive_mode = True, logging = True, **options) # !!! change following IP address '192.168.x.xxx' with yours !!!
+client = NetGear(address = '127.0.0.1', port = '5567', protocol = 'tcp',  pattern = 1, receive_mode = True, logging = True, **options) # !!! change following IP address '192.168.x.xxx' with yours !!!
 
 # loop over
 while True:
