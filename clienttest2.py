@@ -7,7 +7,7 @@ options = {'multiclient_mode': True}
 addr = "192.168.7.89"
 port = '5577'
 proto = 'tcp' #tcp or ipc
-pattern = 2 # 0, 1, or 2
+pattern = 2 #0, 1, or 2
 
 # Define NetGear Client at Server's IP address and assign a unique port address and other parameters 
 client = NetGear(address = addr , port = port , protocol = proto,  pattern = pattern, receive_mode = True, logging = True, **options)  # !!! change following IP address '192.168.x.xxx' with yours !!!
