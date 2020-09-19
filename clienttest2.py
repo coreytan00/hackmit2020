@@ -5,7 +5,7 @@ import cv2
 options = {'multiclient_mode': True} 
 
 addr = "192.168.7.89"
-port = 5556
+port = '5577'
 proto = 'tcp' #tcp or ipc
 pattern = 2 # 0, 1, or 2
 

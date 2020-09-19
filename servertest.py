@@ -2,17 +2,18 @@ from vidgear.gears import NetGear
 from vidgear.gears import VideoGear
 from vidgear.gears import CamGear
 import socket
+import cv2
 
 # Open suitable video stream (webcam on first index in our case) 
-#stream = VideoGear(source=0).start() 
-stream = CamGear(source='https://www.youtube.com/watch?v=orXAg5dIMa8&ab_channel=TaylorSwiftVEVO', y_tube=True, logging=True).start() 
+stream = VideoGear(source=0).start() 
+#stream = CamGear(source='https://www.youtube.com/watch?v=orXAg5dIMa8&ab_channel=TaylorSwiftVEVO', y_tube=True, logging=True).start() 
 
 # activate multiclient_mode mode
-options = {'multiclient_mode': True, } 
+options = {'multiclient_mode': True} 
 
 addr = "192.168.7.89"
-port = (5555,5556)
-proto = 'tcp' #tcp or ipc
+port = (5567,5577)
+proto = 'tcp' # tcp or ipc
 pattern = 2 #0, 1, or 2
 
 # Define NetGear Client at given IP address and assign list/tuple of all unique Server((5577,5578) in our case) and other parameters 
