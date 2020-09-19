@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+		<title>Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="author" content="Coery Tan">
+
+	 <!-- Bootstrap CSS -->
+    <link rel="icon" href="static/icon2.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Tenor+Sans" rel="stylesheet">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://use.fontawesome.com/44650f89ff.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+
+</head>
+<body>
+	<div class="container">
+	  	<div class="card text-center border-0 my-5 shadow-lg">
+	    	<div class="mt-5 mb-4">
+	      		<h1 class="display-1"><strong>Corey Tan</strong></h1>
+	      	</div>
+	      	<div class="mx-auto" style="max-width: 50%;">
+	     		<p>
+     				Hello! My name is Corey and I am an ambitious undergraduate developer.
+     				I am seeking opportunities in which I can apply my skills to real life experience! 
+				</p>
+
+				<p> Current studies and projects: AWS and haar training face detection</p>
+				<p> Slightly inspirational quote: "Small mistakes crash rockets into planets." MIT 2006 Integration Bee commentator
+				</p>
+			</div>
+	  		<div>
+	  			<img src="static/me.jpg" class="avatar my-5">
+	  		</div>
+	  		<div class="card-body">
+				<nav>
+					<a href="https://www.linkedin.com/in/corey-tan-933bb5173/">
+					<i class="fa fa-linkedin-square fa-5x navitem grow linkedin" data-inline="false"></i>
+					</a>
+
+					<a href="https://www.github.com/coreytan00">
+					<i class="fa fa-github-alt fa-5x navitem grow github" data-inline="false"></i>
+					</a>
+
+					<a href="mailto:coreytan00@gmail.com">
+					<i class="fa fa-envelope fa-5x navitem grow email" data-inline="false"></i>
+					</a>
+				</nav>
+			</div>
+		</div>
+		<hr>
+		<div class="bottom-text text-center">
+			<a href="#" class="navitem">home</a>
+			<a href="projects.html" class="navitem">projects</a>
+		</div>	
+	</div>
+	<canvas class="background"></canvas>
+	<script src="https://npmcdn.com/particlesjs@2.2.2/dist/particles.min.js"></script>
+	<script>
+		window.onload = function(){
+			Particles.init({
+				selector:'.background',
+				color: '#03fc98',
+				maxParticles: 130,
+				connectParticles: true,
+				responsive: [
+					{
+						breakpoint: 768,
+						options: {
+							maxParticles: 80
+						}
+					}, {
+						breakpoint: 375,
+						options: {
+							maxParticles: 50
+						}
+					}
+				]
+			});
+		};
+	</script>
+</body>
+<!-- Footer -->
+<footer id="footer">
+</footer>
+</html>
