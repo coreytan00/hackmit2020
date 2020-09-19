@@ -1,16 +1,22 @@
 from vidgear.gears import NetGear
 from vidgear.gears import VideoGear
 from vidgear.gears import CamGear
+import socket
 
 # Open suitable video stream (webcam on first index in our case) 
 #stream = VideoGear(source=0).start() 
 stream = CamGear(source='https://www.youtube.com/watch?v=orXAg5dIMa8&ab_channel=TaylorSwiftVEVO', y_tube=True, logging=True).start() 
 
 # activate multiclient_mode mode
-options = {'multiclient_mode': True} 
+options = {'multiclient_mode': True, } 
+
+addr = "192.168.7.89"
+port = (5555,5556)
+proto = 'tcp' #tcp or ipc
+pattern = 2 #0, 1, or 2
 
 # Define NetGear Client at given IP address and assign list/tuple of all unique Server((5577,5578) in our case) and other parameters 
-server = NetGear(address = '73.222.1.152', port = (80,81), protocol = 'tcp', pattern = 1, logging = True, **options) # !!! change following IP address '192.168.x.xxx' with yours !!!
+server = NetGear(address = addr, port = port , protocol = proto,  pattern = pattern, logging = True, **options) # !!! change following IP address '192.168.x.xxx' with yours !!!
 
 # Define received data dictionary
 data_dict = {}
@@ -27,7 +33,7 @@ while True:
     if frame is None:
       print('no frame')
       break
-    print("frame read")
+    #print("frame read")
 
     # {do something with the frame here}
 
