@@ -40,16 +40,16 @@
 		<p>
 		<form align ="center"> <!--server-->
   			<label for="videoURL">Enter Video URL</label>
- 	 			<input type="text" id="videoURL" name="videoURL">
+ 	 			<input type="text" id="videoURL" required = "true" name="videoURL">
 	 	 		<input type="submit" value="Submit URL"><br><br>
 		</form>
 		<p>
 				OR
 
 		</p>
-		<form align ="center"> <!--server-->
+		<form align ="center" method = "put"> <!--server-->
  			 <label for="video">Upload video:</label>
- 			 <input type="file" id="video" name="video" accept="video/*">
+ 			 <input type="file" id="video" name="video" accept="video/*" required = "true">
   			 <input type="submit" value = "Submit Video">
 		</form>
 	</p>

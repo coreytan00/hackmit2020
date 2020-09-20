@@ -1,17 +1,15 @@
 <!DOCTYPE HTML>
 
 <head>
-		<title>LiveMasher</title>
+		<title>Syncro</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<meta name="author" content="Coery Tan">
 
 	 <!-- Bootstrap CSS -->
-    <link rel="icon" href="static/icon2.png">
+  
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Tenor+Sans" rel="stylesheet">
-    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-    <script src="https://use.fontawesome.com/44650f89ff.js"></script>
+
     <link rel="stylesheet" type="text/css" href="myStyle.css">
 
 </head>
@@ -61,13 +59,13 @@
 
 					</div>
 					<div class = "groupTable" id = "hiddenInput">  <!--Send information to server, let server  -->
-						<form align="center">
+						<form align="center" >
 						  <label for="fname">First name:</label>
-						  <input type="text" id="fname" name="fname"><br><br>
+						  <input type="text" id="fname" required = "true" name="fname"><br><br>
 						  <label for="lname">Last name:</label>
-						  <input type="text" id="lname" name="lname"><br><br>
+						  <input type="text" id="lname" required = "true" name="lname"><br><br>
 						  <label for="code">Enter your group code: </label>
-						  <input type="text" id="code" name="code"><br><br>
+						  <input type="text" id="code" required = "true" name="code"><br><br>
 						  
 						  <input type="submit" value="Submit">
 						</form>
