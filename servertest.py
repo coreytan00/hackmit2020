@@ -24,9 +24,7 @@ data_dict = {}
 
 # loop over until KeyBoard Interrupted
 while True:
-
   try: 
-
     # read frames from stream
     frame = stream.read()
 
